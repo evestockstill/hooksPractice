@@ -1,6 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-export default function App() {
-  return <h1>Hello World</h1>;
-}
-  
+let NewText = () => {
+  let [newText, setNewText] = useState('Write Something');
+
+  return (
+    <div>
+      <div>wow this is cool</div>
+      <input
+        type='text'
+        onChange={e => {
+          setNewText(e.target.value);
+        }}
+      />
+      <div>{newText}</div>
+    </div>
+  );
+};
+
+export default NewText;
